@@ -1,7 +1,8 @@
 # cassandra-ds220
-Exercsis for DataStax, DS220: Data Modeling Course
+Exercises for DataStax, DS220: Data Modeling Course
 
 * [Exercise 1](#Exercise1)
+* [Exercise 2](#Exercise2)
 
 
 ### <a id="Exercise1">Exercise1</a>
@@ -28,4 +29,5 @@ the answer should be:
  system_traces |           True |     org.apache.cassandra.locator.SimpleStrategy | {"replication_factor":"2"}
 ```
 
+### <a id="Exercise2">Exercise2</a>
 
