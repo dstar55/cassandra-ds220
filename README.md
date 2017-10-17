@@ -68,7 +68,7 @@ $ COPY videos(video_id, added_date, description, title, user_id) FROM '/root/lab
 now you can check is data imported with
 
 ```
-$ select count from videos;
+$ select count(*) from videos;
 
 $ select * from videos;
 ```
