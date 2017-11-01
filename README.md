@@ -133,6 +133,18 @@ Also you can find specific row in table with:
 select * from videos_by_title_year where title = 'Another Phone Test' and added_year = 2015;
 ```
 
+Note if you try to search without one of the columns which defines partition key
+```
+cqlsh:killrvideo> select * from videos_by_title_year where title = 'Another Phone Test';
+```
+
+it will return following error:
+```
+InvalidRequest: code=2200 [Invalid query] message="Partition key part added_year must be restricted since preceding part is"
+```
+
+The reason: hash function requires all partition key columns('...PRIMARY KEY((title, added_year))...'), otherwise it returns incorect hash 
+  -> in fact it is not possible to find node without all columns from partition key
 
 
 
